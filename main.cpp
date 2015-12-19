@@ -2,32 +2,67 @@
 #include <iostream>
 using namespace std;
 
+int zahl;
+
 void clean();
 void menu();
 void eingabe();
 void prim();
 void mirp();
 
-int zahl;
-
 int main() {
     menu();
 }
 
+bool IstPrim (int zahl){
+    int teiler;
+
+    if (zahl <= 0) {
+        return false;
+    }
+
+    if (zahl == 2) {
+        return true;
+    }
+    else {
+        teiler = 2;
+        while (teiler < zahl) {
+
+            if (zahl % teiler == 0) {
+                return false;
+                break;
+            }
+            else {
+                teiler = teiler + 1;
+            }
+        }
+        if (teiler == zahl) {
+            return true;
+        }
+    }
+}
+
+
 void prim() {
     clean();
-    cout << "(1) Primzahl\n\n";
+    cout << "Primzahlen\n\n";
     eingabe();
-    cout << zahl << endl;
+    clean();
+    if (IstPrim(zahl)==true) {
+        cout << zahl << " ist eine Primzahl" << endl;
+    }
+    else {
+        cout << zahl << " ist keine Primzahl" << endl;
+    }
     system("PAUSE");
     menu();
 };
 
 void mirp() {
     clean();
-    cout << "(2) Mirpzahl\n\n";
+    cout << "Mirpzahlen\n\n";
     eingabe();
-    cout << zahl << endl;
+    clean();
     system("PAUSE");
     menu();
 };
