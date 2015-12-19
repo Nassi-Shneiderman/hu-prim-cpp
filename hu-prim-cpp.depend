@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1450519158 source:c:\users\achim\documents\github\hu-prim-cpp\main.cpp
+	<cstdlib>
+	<iostream>
+
+1450516246 c:\users\achim\documents\github\hu-prim-cpp\prim.hpp
+	<iostream>
+	<cstdlib>
+	"./prim.cpp"
+	"./text.cpp"
+
+1450514369 c:\users\achim\documents\github\hu-prim-cpp\prim.cpp
+
+1450515350 c:\users\achim\documents\github\hu-prim-cpp\text.cpp
+
+1450514369 source:c:\users\achim\documents\github\hu-prim-cpp\prim.cpp
+
+1450515350 source:c:\users\achim\documents\github\hu-prim-cpp\text.cpp
+
