@@ -2,26 +2,39 @@
 #include <iostream>
 using namespace std;
 
-void clean() {
-    system("cls");
+void clean();
+void menu();
+void eingabe();
+void prim();
+void mirp();
+
+int zahl;
+
+int main() {
+    menu();
 }
 
-void prim(){
+void prim() {
     clean();
-    int inputNum;
-    cout << "Zahl: ";
-    cin >> inputNum;
+    cout << "(1) Primzahl\n\n";
+    eingabe();
+    cout << zahl << endl;
+    system("PAUSE");
+    menu();
 };
 
-void mirp(){
+void mirp() {
     clean();
-    int inputNum;
-    cout << "Zahl: ";
-    cin >> inputNum;
+    cout << "(2) Mirpzahl\n\n";
+    eingabe();
+    cout << zahl << endl;
+    system("PAUSE");
+    menu();
 };
 
 void menu() {
     char auswahl;
+    clean();
     cout << "---|Menu|---" << endl;
     cout << "(1) Primzahl" << endl;
     cout << "(2) Mirpzahl" << endl;
@@ -32,24 +45,26 @@ void menu() {
     switch(auswahl){
         case '1':
         case 'p':
-        case 'P':
             prim();
         break;
 
         case '2':
         case 'm':
-        case 'M':
             mirp();
         break;
 
         case '3':
         case 'e':
-        case 'E':
             exit(EXIT_SUCCESS);
         break;
     }
 }
 
-int main() {
-    menu();
+void eingabe() {
+    cout << "Bitte eine Zahl eingeben: ";
+    cin >> zahl;
+}
+
+void clean() {
+    system("cls");
 }
